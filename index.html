@@ -38,11 +38,27 @@ nav{
   justify-content:space-between;
   align-items:center;
   padding:15px 8%;
+  position:relative;
 }
 
 nav h2{
   color:white;
   font-family:'Montserrat', sans-serif;
+}
+
+/* MENU BUTTON */
+.menu-btn{
+  display:none;
+  font-size:28px;
+  color:white;
+  cursor:pointer;
+  position:absolute;
+  right:20px;
+}
+
+/* NAV LINKS */
+.nav-links{
+  display:flex;
 }
 
 nav a{
@@ -198,43 +214,17 @@ footer{
 /* MOBILE */
 @media(max-width:768px){
 
+/* KEEP ROW (important fix) */
 nav{
-  flex-direction:column;
+  flex-direction:row;
 }
 
-.hero h1{
-  font-size:2rem;
-}
-
-.hero p{
-  font-size:1rem;
-}
-
-section{
-  padding:40px 5%;
-}
-
-}
-/* MENU BUTTON */
-.menu-btn{
-  display:none;
-  font-size:28px;
-  color:white;
-  cursor:pointer;
-}
-
-/* NAV LINKS */
-.nav-links{
-  display:flex;
-}
-
-/* MOBILE NAV FIX */
-@media(max-width:768px){
-
+/* SHOW MENU BUTTON */
 .menu-btn{
   display:block;
 }
 
+/* HIDE LINKS INITIALLY */
 .nav-links{
   position:absolute;
   top:60px;
@@ -250,14 +240,28 @@ section{
 
 .nav-links a{
   margin:15px 0;
+  font-size:18px;
 }
 
-/* SHOW MENU WHEN ACTIVE */
+/* ACTIVE MENU */
 .nav-links.active{
   max-height:300px;
 }
 
+.hero h1{
+  font-size:2rem;
 }
+
+.hero p{
+  font-size:1rem;
+}
+
+section{
+  padding:40px 5%;
+}
+
+}
+
 </style>
 </head>
 
@@ -266,7 +270,7 @@ section{
 <header>
 <nav>
 <h2>Mummuy Ola</h2>
-<div>
+
 <!-- MENU BUTTON -->
 <div class="menu-btn" onclick="toggleMenu()">☰</div>
 
@@ -279,7 +283,6 @@ section{
 <a href="#contact">Contact</a>
 </div>
 
-</div>
 </nav>
 </header>
 
@@ -303,8 +306,8 @@ section{
 <img src="./asset/image/Mummuy luxury apartment.png">
 <div class="info">
 <h3>Luxury Apartment</h3>
-<p>Modern apartment with stunning city</p>
-<p>views, 3 bedrooms, 2 bathrooms, 1500 sq ft</p>
+<p>Modern apartment with stunning city views</p>
+<p>3 bedrooms, 2 bathrooms, 1500 sq ft</p>
 <p>Starting at <strong>$250,000</strong></p>
 <a href="#" class="btn">View Details</a>
 </div>
@@ -314,7 +317,7 @@ section{
 <img src="./asset/image/Mummy modern villa.png">
 <div class="info">
 <h3>Modern Villa</h3>
-<p>Spacious villa with private pool,</p>
+<p>Spacious villa with private pool</p>
 <p>4 bedrooms, 3 bathrooms, 2000 sq ft</p>
 <p>Starting at <strong>$450,000</strong></p>
 <a href="#" class="btn">View Details</a>
@@ -326,7 +329,7 @@ section{
 <div class="info">
 <h3>Cozy Family House</h3>
 <p>Beautifully designed family home</p>
-<p>2 bedrooms, 1 bathroom, perfect for small families sq ft</p>
+<p>2 bedrooms, 1 bathroom</p>
 <p>Starting at <strong>$180,000</strong></p>
 <a href="#" class="btn">View Details</a>
 </div>
@@ -340,10 +343,8 @@ section{
 <div class="box">
 <h2>About Us</h2>
 <img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914">
-<p>We provide premium real estate services with trust,</p>
-<p>quality, and professionalism.</p>
-<p>Our mission is to help you find your perfect</p>
-<p>home with ease and confidence.</p>
+<p>We provide premium real estate services with trust, quality, and professionalism.</p>
+<p>Our mission is to help you find your perfect home with ease and confidence.</p>
 </div>
 </section>
 
@@ -352,11 +353,8 @@ section{
 <div class="box">
 <h2>Our Services</h2>
 <img src="./asset/image/Mummy our services.png">
-<p>We specialize in buying, selling, renting,  porperty</p>
-<p>management, and investment consulting. </p>
-<p>Our expert team ensures every transcation is</p>
-<p>smooth, professional, and tailored to</p>
-<p>your needs.</p>
+<p>We specialize in buying, selling, renting, property management, and investment consulting.</p>
+<p>Our expert team ensures every transaction is smooth and professional.</p>
 </div>
 </section>
 
@@ -366,14 +364,17 @@ section{
 <p>Chat directly with us on WhatsApp</p>
 <a href="https://wa.me/2349056814411" class="whatsapp-btn">Chat Now</a>
 </section>
+
+<footer>
+<p>© 2026 Wise Tech. All Rights Reserved.</p>
+</footer>
+
+<!-- JAVASCRIPT -->
 <script>
 function toggleMenu(){
   document.getElementById("navLinks").classList.toggle("active");
 }
 </script>
-<footer>
-<p>© 2026 Wise Tech. All Rights Reserved.</p>
-</footer>
 
 </body>
 </html>
