@@ -3,319 +3,323 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Mummuy Ola Real Estate</title>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
+
 <style>
 
-
-/* GLOBAL */
+/* RESET */
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  scroll-behavior:smooth;
 }
 
+/* BODY */
 body{
+  font-family:'Open Sans', sans-serif;
   background:#f5f7fa;
   color:#333;
-  line-height:1.6;
+}
+
+/* NAVBAR */
+header{
+  position:sticky;
+  top:0;
+  background:#0B3D91;
+  z-index:1000;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:15px 8%;
+}
+
+nav h2{
+  color:white;
+  font-family:'Montserrat', sans-serif;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:20px;
+  font-weight:500;
+  transition:0.3s;
+}
+
+nav a:hover{
+  color:#FFD700;
 }
 
 /* HERO */
 .hero{
-  position:relative;
-  width:100%;
   height:90vh;
-}
-
-.hero img{
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  filter:brightness(55%);
-}
-
-.hero-content{
-  position:absolute;
-  top:50%;
-  left:50%;
-  transform:translate(-50%,-50%);
+  background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+  url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   text-align:center;
   color:white;
-  width:90%;
+  padding:20px;
 }
 
-.hero-content h1{
-  font-size:48px;
-  margin-bottom:10px;
+.hero h1{
+  font-size:3rem;
+  font-family:'Montserrat', sans-serif;
+  margin-bottom:15px;
 }
 
-.hero-content p{
-  font-size:20px;
-  margin-bottom:20px;
+.hero p{
+  font-size:1.2rem;
+  margin-bottom:25px;
 }
 
 /* BUTTON */
 .btn{
   display:inline-block;
-  padding:12px 24px;
-  margin:6px;
-  background:#0B3D91;
-  color:white;
+  padding:12px 25px;
+  background:#FFD700;
+  color:#0B3D91;
+  border-radius:5px;
   text-decoration:none;
-  border-radius:6px;
   font-weight:bold;
+  margin:5px;
   transition:0.3s;
 }
 
 .btn:hover{
-  background:#082c6c;
+  background:#0B3D91;
+  color:#FFD700;
 }
 
-/* SECTIONS */
+/* SECTION */
 section{
-  padding:60px 20px;
-  text-align:center;
+  padding:60px 8%;
 }
 
 h2{
-  font-size:32px;
-  margin-bottom:30px;
+  text-align:center;
+  margin-bottom:40px;
+  font-family:'Montserrat', sans-serif;
+  color:#0B3D91;
 }
 
-/* PROPERTY GRID */
+/* PROPERTIES */
 .properties{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
   gap:25px;
-  max-width:1200px;
-  margin:auto;
 }
 
 .property-card{
   background:white;
   border-radius:10px;
   overflow:hidden;
-  box-shadow:0 5px 20px rgba(0,0,0,0.08);
+  box-shadow:0 8px 25px rgba(0,0,0,0.08);
   transition:0.3s;
 }
 
 .property-card:hover{
-  transform:translateY(-6px);
+  transform:translateY(-8px);
 }
 
 .property-card img{
   width:100%;
-  height:230px;
+  height:220px;
   object-fit:cover;
 }
 
-.info{
+.property-card .info{
   padding:20px;
 }
 
-/* ABOUT */
-.about img{
+.property-card h3{
+  color:#0B3D91;
+  margin-bottom:10px;
+}
+
+.property-card p{
+  font-size:0.95rem;
+  margin-bottom:10px;
+}
+
+/* ABOUT + SERVICES */
+.box{
+  background:white;
+  border-radius:10px;
+  padding:40px;
+  text-align:center;
+  box-shadow:0 5px 15px rgba(0,0,0,0.05);
+}
+
+.box img{
   width:100%;
   max-width:500px;
-  height:280px;
-  object-fit:cover;
   border-radius:10px;
-  margin:20px auto;
-  display:block;
+  margin-bottom:20px;
 }
 
-/* SERVICES */
-.services img{
-  width:100%;
-  max-width:380px;
-  height:240px;
-  object-fit:cover;
-  border-radius:10px;
-  margin:20px auto;
-  display:block;
+/* CONTACT */
+.contact{
+  text-align:center;
 }
 
-/* WHATSAPP BUTTON */
 .whatsapp-btn{
   display:inline-block;
   padding:15px 30px;
   background:#25D366;
   color:white;
+  border-radius:50px;
   text-decoration:none;
-  border-radius:8px;
-  font-size:18px;
   font-weight:bold;
+  margin-top:20px;
 }
 
 .whatsapp-btn:hover{
-  background:#1da851;
+  background:#128C7E;
 }
 
 /* FOOTER */
 footer{
   background:#0B3D91;
   color:white;
-  padding:25px;
+  text-align:center;
+  padding:20px;
   margin-top:40px;
 }
 
 /* MOBILE */
 @media(max-width:768px){
 
-.hero{
-  height:70vh;
+nav{
+  flex-direction:column;
 }
 
-.hero-content h1{
-  font-size:28px;
+.hero h1{
+  font-size:2rem;
 }
 
-.hero-content p{
-  font-size:16px;
+.hero p{
+  font-size:1rem;
 }
 
-.property-card img{
-  height:200px;
+section{
+  padding:40px 5%;
 }
 
 }
 
-
-
-* { margin:0; padding:0; box-sizing:border-box; }
-body { font-family:'Open Sans', sans-serif; color:#333; background:#f9f9f9; }
-
-header { background:#0B3D91; color:white; padding:20px 0; position:sticky; top:0; z-index:1000; }
-nav { display:flex; justify-content:space-around; align-items:center; flex-wrap:wrap; }
-nav a { color:white; font-weight:bold; padding:10px 15px; transition:0.3s; }
-nav a:hover { background:#FFD700; color:#0B3D91; border-radius:5px; }
-
-.hero { position:relative; height:700px; display:flex; align-items:center; justify-content:center; text-align:center; }
-.hero img { width:100%; height:100%; object-fit:cover; position:absolute; top:0; left:0; z-index:1; }
-.hero-content { position:relative; z-index:2; color:white; text-shadow:2px 2px 10px rgba(0,0,0,0.6); }
-.hero-content h1 { font-family:'Montserrat', sans-serif; font-size:3rem; margin-bottom:20px; }
-.hero-content p { font-size:1.3rem; margin-bottom:30px; }
-.hero-content .btn { background:#FFD700; color:#0B3D91; padding:15px 30px; margin:10px; font-weight:bold; border-radius:5px; text-decoration:none; transition:0.3s; }
-.hero-content .btn:hover { background:#0B3D91; color:#FFD700; }
-
-section { padding:60px 10%; }
-h2 { font-family:'Montserrat', sans-serif; margin-bottom:40px; text-align:center; color:#0B3D91; }
-
-.properties { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; }
-.property-card { background:white; border-radius:10px; overflow:hidden; width:320px; box-shadow:0 4px 15px rgba(0,0,0,0.15); transition:0.3s; }
-.property-card:hover { transform:translateY(-5px); }
-.property-card img { width:100%; height:220px; object-fit:cover; }
-.property-card .info { padding:15px; }
-.property-card .info h3 { font-family:'Montserrat', sans-serif; margin-bottom:10px; color:#0B3D91; }
-.property-card .info p { margin-bottom:10px; color:#555; font-size:0.95rem; }
-.property-card .info .btn { display:inline-block; background:#0B3D91; color:#FFD700; padding:10px 20px; border-radius:5px; font-weight:bold; text-decoration:none; transition:0.3s; }
-.property-card .info .btn:hover { background:#FFD700; color:#0B3D91; }
-
-.about, .services { text-align:center; background:#fff; padding:60px 10%; border-radius:10px; box-shadow:0 4px 10px rgba(0,0,0,0.05); margin-bottom:40px; }
-.about img { width:100%; max-width:600px; border-radius:10px; margin-bottom:20px; }
-.services img { width:100%; max-width:400px; border-radius:10px; margin-bottom:20px; }
-.about p, .services p { max-width:700px; margin:0 auto; color:#555; font-size:1.05rem; line-height:1.7; }
-
-.contact { text-align:center; }
-.contact a.whatsapp-btn { display:inline-block; background:#25D366; color:white; padding:15px 30px; font-weight:bold; border-radius:50px; font-size:1.2rem; text-decoration:none; transition:0.3s; margin-top:20px; }
-.contact a.whatsapp-btn:hover { background:#128C7E; }
-
-footer { background:#0B3D91; color:white; text-align:center; padding:30px 10%; font-size:0.95rem; }
-footer a { color:#FFD700; margin:0 10px; text-decoration:none; }
-
-@media(max-width:768px){ 
-  .properties{flex-direction:column;align-items:center;} 
-  .hero-content h1{font-size:2.2rem;} 
-  .hero-content p{font-size:1.1rem;}
-}
 </style>
 </head>
+
 <body>
 
 <header>
 <nav>
+<h2>Mummuy Ola</h2>
+<div>
 <a href="#home">Home</a>
 <a href="#properties">Properties</a>
 <a href="#about">About</a>
 <a href="#services">Services</a>
 <a href="#contact">Contact</a>
+</div>
 </nav>
 </header>
 
-<!-- Hero Section -->
+<!-- HERO -->
 <section class="hero" id="home">
-  <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80" alt="Luxury Home Hero">
-  <div class="hero-content">
-    <h1>Mummuy Ola Real Estate</h1>
-    <p>Luxury Homes, Villas, and Apartments Tailored for You</p>
-    <a href="#properties" class="btn">View Listings</a>
-    <a href="#contact" class="btn">Contact Us</a>
-  </div>
-</section>
-
-<!-- Featured Properties -->
-<section id="properties">
-<h2>Featured Properties</h2>
-<div class="properties">
-  <div class="property-card">
-    <img src="./asset/image/Mummuy luxury apartment.png" alt="Luxury Apartment">
-    <div class="info">
-      <h3>Luxury Apartment</h3>
-      <p>Modern apartment with stunning city views, 3 bedrooms, 2 baths, 1500 sqft.</p>
-      <p>Starting at $250,000</p>
-      <a href="#" class="btn">View Details</a>
-    </div>
-  </div>
-
-  <div class="property-card">
-    <img src="./asset/image/Mummy modern villa.png" alt="Modern Villa">
-    <div class="info">
-      <h3>Modern Villa</h3>
-      <p>Spacious villa with private pool, 4 bedrooms, 3 baths, 2000 sqft of luxury.</p>
-      <p>Starting at $450,000</p>
-      <a href="#" class="btn">View Details</a>
-    </div>
-  </div>
-
-  <div class="property-card">
-    <img src="./asset/image/Mummy cozy house.png" alt="Cozy House">
-    <div class="info">
-      <h3>Cozy House</h3>
-      <p>Beautifully designed home, 2 bedrooms, 1 bath, perfect for small families.</p>
-      <p>Starting at $180,000</p>
-      <a href="#" class="btn">View Details</a>
-    </div>
-  </div>
+<div>
+<h1>Find Your Dream Home Today</h1>
+<p>Luxury homes, villas, and apartments tailored to your lifestyle</p>
+<a href="#properties" class="btn">View Properties</a>
+<a href="#contact" class="btn">Contact Us</a>
 </div>
 </section>
 
-<!-- About Section -->
-<section id="about" class="about">
-<h2>About Mummuy Ola Real Estate</h2>
-<img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914?auto=format&fit=crop&w=600&q=80" alt="About Real Estate">
-<p>Mummuy Ola Real Estate is committed to providing premium properties and unmatched customer service. With a focus on trust, quality, and elegance, we help our clients find their dream homes with confidence.</p>
+<!-- PROPERTIES -->
+<section id="properties">
+<h2>Featured Properties</h2>
+
+<div class="properties">
+
+<div class="property-card">
+<img src="./asset/image/Mummuy luxury apartment.png">
+<div class="info">
+<h3>Luxury Apartment</h3>
+<p>Modern apartment with stunning city</p>
+<p>views, 3 bedrooms, 2 bathrooms, 1500 sq ft</p>
+<p>Starting at <strong>$250,000</strong></p>
+<a href="#" class="btn">View Details</a>
+</div>
+</div>
+
+<div class="property-card">
+<img src="./asset/image/Mummy modern villa.png">
+<div class="info">
+<h3>Modern Villa</h3>
+<p>Spacious villa with private pool,</p>
+<p>4 bedrooms, 3 bathrooms, 2000 sq ft</p>
+<p>Starting at <strong>$450,000</strong></p>
+<a href="#" class="btn">View Details</a>
+</div>
+</div>
+
+<div class="property-card">
+<img src="./asset/image/Mummy cozy house.png">
+<div class="info">
+<h3>Cozy Family House</h3>
+<p>Beautifully designed family home</p>
+<p>2 bedrooms, 1 bathroom, perfect for small families sq ft</p>
+<p>Starting at <strong>$180,000</strong></p>
+<a href="#" class="btn">View Details</a>
+</div>
+</div>
+
+</div>
 </section>
 
-<!-- Services Section -->
-<section id="services" class="services">
+<!-- ABOUT -->
+<section id="about">
+<div class="box">
+<h2>About Us</h2>
+<img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914">
+<p>We provide premium real estate services with trust,</p>
+<p>quality, and professionalism.</p>
+<p>Our mission is to help you find your perfect</p>
+<p>home with ease and confidence.</p>
+</div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+<div class="box">
 <h2>Our Services</h2>
-<img src="./asset/image/Mummy our services.png" alt="Property Services">
-<p>We specialize in buying, selling, renting, property management, and investment consultation. Our expert team ensures every transaction is smooth, professional, and tailored to your needs.</p>
+<img src="./asset/image/Mummy our services.png">
+<p>We specialize in buying, selling, renting,  porperty</p>
+<p>management, and investment consulting. </p>
+<p>Our expert team ensures every transcation is</p>
+<p>smooth, professional, and tailored to</p>
+<p>your needs.</p>
+</div>
 </section>
 
-<!-- Contact Section -->
+<!-- CONTACT -->
 <section id="contact" class="contact">
-<h2>Contact Us via WhatsApp</h2>
-<a href="https://wa.me/2349056814411" class="whatsapp-btn" target="_blank">Chat on WhatsApp</a>
+<h2>Contact Us</h2>
+<p>Chat directly with us on WhatsApp</p>
+<a href="https://wa.me/2349056814411" class="whatsapp-btn">Chat Now</a>
 </section>
 
 <footer>
-<p>&copy; 2026 Wise Tech. All Rights Reserved.</p>
-<p>
-
-</p>
+<p>© 2026 Wise Tech. All Rights Reserved.</p>
 </footer>
 
 </body>
