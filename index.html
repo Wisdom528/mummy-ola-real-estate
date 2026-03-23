@@ -48,7 +48,7 @@ nav{
   font-weight:700;
 }
 
-/* NAV LINKS DESKTOP */
+/* NAV LINKS */
 .nav-links{
   display:flex;
   gap:25px;
@@ -75,7 +75,7 @@ nav{
   transition:0.3s;
 }
 
-/* HAMBURGER TO X */
+/* HAMBURGER ANIMATION */
 .menu-btn.active span:nth-child(1){
   transform:rotate(45deg) translate(5px,5px);
 }
@@ -98,13 +98,22 @@ nav{
   color:white;
 }
 
+/* FIXED HERO CONTENT */
+.hero div{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px;
+}
+
 .hero h1{
   font-size:3rem;
   font-family:'Montserrat', sans-serif;
 }
 
 .hero p{
-  margin:15px 0;
+  margin:10px 0;
+  max-width:500px;
 }
 
 /* BUTTON */
@@ -115,7 +124,26 @@ nav{
   border-radius:5px;
   text-decoration:none;
   font-weight:bold;
-  margin:5px;
+  width:80%;
+  max-width:260px;
+  text-align:center;
+}
+
+/* SIDE-BY-SIDE ON BIG SCREENS */
+@media(min-width:600px){
+  .hero div{
+    flex-direction:row;
+    flex-wrap:wrap;
+    justify-content:center;
+  }
+
+  .hero h1{
+    width:100%;
+  }
+
+  .hero p{
+    width:100%;
+  }
 }
 
 /* SECTIONS */
@@ -168,7 +196,7 @@ h2{
   margin-bottom:10px;
 }
 
-/* ABOUT + SERVICES */
+/* BOX */
 .box{
   background:white;
   border-radius:10px;
@@ -200,10 +228,6 @@ h2{
   margin-top:20px;
 }
 
-.whatsapp-btn:hover{
-  background:#128C7E;
-}
-
 /* FOOTER */
 footer{
   background:#0B3D91;
@@ -221,7 +245,6 @@ footer{
   z-index:1001;
 }
 
-/* SIDE MENU */
 .nav-links{
   position:fixed;
   top:0;
@@ -292,10 +315,8 @@ footer{
 </nav>
 </header>
 
-<!-- OVERLAY -->
 <div id="overlay" onclick="toggleMenu()"></div>
 
-<!-- HERO -->
 <section class="hero" id="home">
 <div>
 <h1>Find Your Dream Home Today</h1>
@@ -305,7 +326,6 @@ footer{
 </div>
 </section>
 
-<!-- PROPERTIES -->
 <section id="properties">
 <h2>Featured Properties</h2>
 
@@ -347,7 +367,6 @@ footer{
 </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about">
 <div class="box">
 <h2>About Us</h2>
@@ -357,7 +376,6 @@ footer{
 </div>
 </section>
 
-<!-- SERVICES -->
 <section id="services">
 <div class="box">
 <h2>Our Services</h2>
@@ -367,7 +385,6 @@ footer{
 </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" class="contact">
 <h2>Contact Us</h2>
 <p>Chat directly with us on WhatsApp</p>
