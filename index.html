@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Mummuy Ola Real Estate</title>
+<title>Wise Homes Real Estate</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
 
@@ -12,280 +12,258 @@
 
 /* RESET */
 *{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  scroll-behavior:smooth;
+margin:0;
+padding:0;
+box-sizing:border-box;
+scroll-behavior:smooth;
 }
 
 /* BODY */
 body{
-  font-family:'Open Sans', sans-serif;
-  background:#f5f7fa;
-  color:#333;
+font-family:'Open Sans', sans-serif;
+background:#f5f7fa;
+color:#333;
 }
 
 /* NAVBAR */
 header{
-  position:sticky;
-  top:0;
-  background:#0B3D91;
-  z-index:1000;
+position:sticky;
+top:0;
+background:#0B3D91;
+z-index:1000;
 }
 
 nav{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  padding:15px 8%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 8%;
 }
 
 /* LOGO */
 .logo{
-  color:white;
-  font-family:'Montserrat', sans-serif;
-  font-size:22px;
-  font-weight:700;
+color:white;
+font-family:'Montserrat', sans-serif;
+font-size:22px;
+font-weight:700;
 }
 
 /* NAV LINKS */
 .nav-links{
-  display:flex;
-  gap:25px;
+display:flex;
+gap:25px;
 }
 
 .nav-links a{
-  color:white;
-  text-decoration:none;
-  font-weight:500;
+color:white;
+text-decoration:none;
+font-weight:500;
 }
 
 /* MENU BUTTON */
 .menu-btn{
-  display:none;
-  flex-direction:column;
-  gap:5px;
-  cursor:pointer;
+display:none;
+flex-direction:column;
+gap:5px;
+cursor:pointer;
 }
 
 .menu-btn span{
-  width:25px;
-  height:3px;
-  background:white;
-  transition:0.3s;
+width:25px;
+height:3px;
+background:white;
+transition:0.3s;
 }
 
 /* HAMBURGER ANIMATION */
 .menu-btn.active span:nth-child(1){
-  transform:rotate(45deg) translate(5px,5px);
+transform:rotate(45deg) translate(5px,5px);
 }
 .menu-btn.active span:nth-child(2){
-  opacity:0;
+opacity:0;
 }
 .menu-btn.active span:nth-child(3){
-  transform:rotate(-45deg) translate(5px,-5px);
+transform:rotate(-45deg) translate(5px,-5px);
 }
 
 /* HERO */
 .hero{
-  height:90vh;
-  background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-  url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80") center/cover no-repeat;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  color:white;
+height:90vh;
+background:linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80") center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+color:white;
 }
 
-/* FIXED HERO CONTENT */
 .hero div{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  gap:12px;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:12px;
 }
 
 .hero h1{
-  font-size:3rem;
-  font-family:'Montserrat', sans-serif;
+font-size:3rem;
+font-family:'Montserrat', sans-serif;
 }
 
 .hero p{
-  margin:10px 0;
-  max-width:500px;
+margin:10px 0;
+max-width:500px;
 }
 
 /* BUTTON */
 .btn{
-  padding:12px 25px;
-  background:#FFD700;
-  color:#0B3D91;
-  border-radius:5px;
-  text-decoration:none;
-  font-weight:bold;
-  width:80%;
-  max-width:260px;
-  text-align:center;
-}
-
-/* SIDE-BY-SIDE ON BIG SCREENS */
-@media(min-width:600px){
-  .hero div{
-    flex-direction:row;
-    flex-wrap:wrap;
-    justify-content:center;
-  }
-
-  .hero h1{
-    width:100%;
-  }
-
-  .hero p{
-    width:100%;
-  }
+padding:12px 25px;
+background:#FFD700;
+color:#0B3D91;
+border-radius:5px;
+text-decoration:none;
+font-weight:bold;
+width:80%;
+max-width:260px;
+text-align:center;
 }
 
 /* SECTIONS */
 section{
-  padding:60px 8%;
+padding:60px 8%;
 }
 
 h2{
-  text-align:center;
-  margin-bottom:40px;
-  color:#0B3D91;
+text-align:center;
+margin-bottom:40px;
+color:#0B3D91;
 }
 
 /* PROPERTIES */
 .properties{
-  display:grid;
-  grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
-  gap:25px;
+display:grid;
+grid-template-columns:repeat(auto-fit, minmax(280px,1fr));
+gap:25px;
 }
 
 .property-card{
-  background:white;
-  border-radius:10px;
-  overflow:hidden;
-  box-shadow:0 8px 25px rgba(0,0,0,0.08);
-  transition:0.3s;
+background:white;
+border-radius:10px;
+overflow:hidden;
+box-shadow:0 8px 25px rgba(0,0,0,0.08);
+transition:0.3s;
 }
 
 .property-card:hover{
-  transform:translateY(-8px);
+transform:translateY(-8px);
 }
 
 .property-card img{
-  width:100%;
-  height:220px;
-  object-fit:cover;
+width:100%;
+height:220px;
+object-fit:cover;
 }
 
 .property-card .info{
-  padding:20px;
+padding:20px;
 }
 
 .property-card h3{
-  color:#0B3D91;
-  margin-bottom:10px;
-}
-
-.property-card p{
-  font-size:0.95rem;
-  margin-bottom:10px;
+color:#0B3D91;
+margin-bottom:10px;
 }
 
 /* BOX */
 .box{
-  background:white;
-  border-radius:10px;
-  padding:40px;
-  text-align:center;
-  box-shadow:0 5px 15px rgba(0,0,0,0.05);
-}
-
-.box img{
-  width:100%;
-  max-width:500px;
-  border-radius:10px;
-  margin-bottom:20px;
+background:white;
+border-radius:10px;
+padding:40px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.05);
 }
 
 /* CONTACT */
 .contact{
-  text-align:center;
+text-align:center;
 }
 
-.whatsapp-btn{
-  display:inline-block;
-  padding:15px 30px;
-  background:#25D366;
-  color:white;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:bold;
-  margin-top:20px;
+.contact-form{
+max-width:500px;
+margin:20px auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+padding:12px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+
+.contact-form textarea{
+min-height:120px;
+resize:none;
+}
+
+.contact-form button{
+background:#0B3D91;
+color:#fff;
+border:none;
+cursor:pointer;
+}
+
+.contact-alt{
+margin-top:20px;
+}
+
+.contact-alt a{
+color:#0B3D91;
+font-weight:bold;
+text-decoration:none;
 }
 
 /* FOOTER */
 footer{
-  background:#0B3D91;
-  color:white;
-  text-align:center;
-  padding:20px;
-  margin-top:40px;
+background:#0B3D91;
+color:white;
+text-align:center;
+padding:20px;
+margin-top:40px;
 }
 
-/* MOBILE MENU */
+/* MOBILE */
 @media(max-width:768px){
 
 .menu-btn{
-  display:flex;
-  z-index:1001;
+display:flex;
+z-index:1001;
 }
 
 .nav-links{
-  position:fixed;
-  top:0;
-  right:-260px;
-  width:260px;
-  height:100vh;
-  background:#0B3D91;
-  flex-direction:column;
-  padding:80px 20px;
-  gap:25px;
-  transition:0.4s;
+position:fixed;
+top:0;
+right:-260px;
+width:260px;
+height:100vh;
+background:#0B3D91;
+flex-direction:column;
+padding:80px 20px;
+gap:25px;
+transition:0.4s;
 }
 
 .nav-links.active{
-  right:0;
+right:0;
 }
 
 .nav-links a{
-  font-size:18px;
-  border-bottom:1px solid rgba(255,255,255,0.1);
-  padding-bottom:10px;
+font-size:18px;
+border-bottom:1px solid rgba(255,255,255,0.1);
+padding-bottom:10px;
 }
 
-}
-
-/* OVERLAY */
-#overlay{
-  position:fixed;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,0.5);
-  opacity:0;
-  pointer-events:none;
-  transition:0.3s;
-}
-
-#overlay.active{
-  opacity:1;
-  pointer-events:all;
 }
 
 </style>
@@ -296,12 +274,12 @@ footer{
 <header>
 <nav>
 
-<h2 class="logo">Mummuy Ola</h2>
+<h2 class="logo">Wise Homes</h2>
 
 <div class="menu-btn" id="menuBtn" onclick="toggleMenu()">
-  <span></span>
-  <span></span>
-  <span></span>
+<span></span>
+<span></span>
+<span></span>
 </div>
 
 <div class="nav-links" id="navLinks">
@@ -314,8 +292,6 @@ footer{
 
 </nav>
 </header>
-
-<div id="overlay" onclick="toggleMenu()"></div>
 
 <section class="hero" id="home">
 <div>
@@ -336,9 +312,6 @@ footer{
 <div class="info">
 <h3>Luxury Apartment</h3>
 <p>Modern apartment with stunning city views</p>
-<p>3 bedrooms, 2 bathrooms, 1500 sq ft</p>
-<p>Starting at <strong>$250,000</strong></p>
-<a href="#" class="btn">View Details</a>
 </div>
 </div>
 
@@ -347,9 +320,6 @@ footer{
 <div class="info">
 <h3>Modern Villa</h3>
 <p>Spacious villa with private pool</p>
-<p>4 bedrooms, 3 bathrooms, 2000 sq ft</p>
-<p>Starting at <strong>$450,000</strong></p>
-<a href="#" class="btn">View Details</a>
 </div>
 </div>
 
@@ -358,9 +328,6 @@ footer{
 <div class="info">
 <h3>Cozy Family House</h3>
 <p>Beautifully designed family home</p>
-<p>2 bedrooms, 1 bathroom</p>
-<p>Starting at <strong>$180,000</strong></p>
-<a href="#" class="btn">View Details</a>
 </div>
 </div>
 
@@ -370,36 +337,49 @@ footer{
 <section id="about">
 <div class="box">
 <h2>About Us</h2>
-<img src="https://images.unsplash.com/photo-1580587771525-78b9dba3b914">
 <p>We provide premium real estate services with trust, quality, and professionalism.</p>
-<p>Our mission is to help you find your perfect home with ease and confidence.</p>
 </div>
 </section>
 
 <section id="services">
 <div class="box">
 <h2>Our Services</h2>
-<img src="./asset/image/Mummy our services.png">
-<p>We specialize in buying, selling, renting, property management, and investment consulting.</p>
-<p>Our expert team ensures every transaction is smooth and professional.</p>
+<p>Buying, selling, renting, and property management made easy.</p>
 </div>
 </section>
 
 <section id="contact" class="contact">
 <h2>Contact Us</h2>
-<p>Chat directly with us on WhatsApp</p>
-<a href="https://wa.me/2349056814411" class="whatsapp-btn">Chat Now</a>
+
+<p>Send us a message and we’ll get back to you.</p>
+
+<form class="contact-form" onsubmit="handleContact(event)">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Your Message" required></textarea>
+<button type="submit" class="btn">Send Message</button>
+</form>
+
+<div class="contact-alt">
+<p>Email:</p>
+<a href="mailto:oluwabobo47@email.com"></a>
+</div>
+
 </section>
 
 <footer>
-<p>© 2026 Wise Tech</p>
+<p>© 2026 Wise tech. All rights reserved.</p>
 </footer>
 
 <script>
 function toggleMenu(){
-  document.getElementById("navLinks").classList.toggle("active");
-  document.getElementById("menuBtn").classList.toggle("active");
-  document.getElementById("overlay").classList.toggle("active");
+document.getElementById("navLinks").classList.toggle("active");
+document.getElementById("menuBtn").classList.toggle("active");
+}
+
+function handleContact(e){
+e.preventDefault();
+alert("Message sent successfully 🚀");
 }
 </script>
 
